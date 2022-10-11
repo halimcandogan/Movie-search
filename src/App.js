@@ -4,9 +4,11 @@ import './index.css';
 import Watched from './components/Watched';
 import Watchlist from './components/Watchlist';
 import Add from './components/Add';
+import { GlobalProvider } from './context/GlobalContext';
 
 function App() {
   return (
+    <GlobalProvider>
     <Router>
       <Header />
       <Routes>
@@ -15,6 +17,7 @@ function App() {
         <Route path="/add" element={<Add />} />
       </Routes>
     </Router>
+    </GlobalProvider>
   );
 }
 
