@@ -32,7 +32,7 @@ const Add = () => {
             type="text"
             value={searchvalue}
             onChange={onChange}
-            placeholder="Film, dizi ara..."
+            placeholder="Film, TV şovu ara..."
             className="bg-white outline-none text-black p-2 px-5 mt-3 rounded-full font-normal block"
           />
         </div>

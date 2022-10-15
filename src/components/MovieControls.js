@@ -14,7 +14,8 @@ const MovieControls = ({ movie, type }) => {
     <div className=" flex absolute">
       {type === "watchlist" && (
         <div className="flex items-center flex-col">
-          <h4 className="group-hover:opacity-100 opacity-0 font-bold bg-sky-900 m-1 text-white px-3 rounded-full">{movie.title}</h4>
+          <h4 className="group-hover:opacity-100 opacity-0 font-bold bg-sky-900 m-1 text-white px-3 rounded-full">{movie.title.length <= 10 ? movie.title : 
+          `${movie.title.substring(0,10)}...`} </h4>
           <div>
           <button>
             <FontAwesomeIcon
@@ -35,7 +36,8 @@ const MovieControls = ({ movie, type }) => {
       )}
       {type === "watched" && (
         <div className="flex items-center flex-col">
-        <h4 className="group-hover:opacity-100 opacity-0 font-bold bg-sky-900 m-1 text-white px-3 rounded-full">{movie.title}</h4>
+        <h4 className="group-hover:opacity-100 opacity-0 font-bold bg-sky-900 m-1 text-white px-3 rounded-full truncate">{movie.title.length <= 10 ? movie.title : 
+          `${movie.title.substring(0,10)}...`} </h4>
         <div>
         <button>
           <FontAwesomeIcon

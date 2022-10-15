@@ -13,9 +13,9 @@ const MovieCard = ({ movie }) => {
     <div className="flex justify-between py-6">
       <div className="flex">
         {movie.poster_path ? (
-          <img src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} />
+          <img className=" w-52 h-72" src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} />
         ) : (
-          <div className="bg-gray-500 w-52 h-64 "></div>
+          <div className="bg-gray-500 w-52 h-72 "></div>
         )}
         <div className="mx-6 text-xl">
           <h3 className="font-bold text-sky-900">{movie.title}</h3>
@@ -31,14 +31,14 @@ const MovieCard = ({ movie }) => {
         <button
           disabled={storedMovie}
           onClick={() => addMovieToWatchlist(movie)}
-          className="disabled:bg-gray-500 bg-sky-900 h-full mx-3 text-white p-5 font-semibold hover:bg-sky-900 rounded-lg"
+          className="disabled:bg-gray-500 bg-sky-900 h-full mx-3 text-white p-5 font-semibold  rounded-lg hover:shadow-2xl hover:bg-sky-800"
         >
           İzlenecekler <br /> Listesine Ekle
         </button>
         <button
           disabled={storedMovieWatched}
           onClick={() => addMovieToWatched(movie)}
-          className="disabled:bg-gray-500 bg-sky-900 h-full text-white p-5 font-semibold hover:bg-sky-900 rounded-lg"
+          className="disabled:bg-gray-500 bg-sky-900 h-full text-white p-5 font-semibold rounded-lg hover:shadow-2xl hover:bg-sky-800"
         >
           İzlenenler <br /> Listesine Ekle
         </button>
