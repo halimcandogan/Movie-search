@@ -1,11 +1,17 @@
 import React, { useContext, useState } from "react";
 import { GlobalContext } from "../context/GlobalContext";
 import MovieContainer from "./MovieContainer";
+import Helmet from "react-helmet";
 
 const Watchlist = () => {
   const { watchlist } = useContext(GlobalContext);
   return (
     <div>
+      <Helmet>
+        <title>
+          Watchlist
+        </title>
+      </Helmet>
       <div className="flex flex-col mx-auto max-w-6xl space-y-5">
         <div className="text-sky-900  font-bold mt-4">
           <h1 className="text-2xl">İzlenecekler</h1>

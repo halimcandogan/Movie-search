@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import MovieCard from "./MovieCard";
+import {Helmet} from "react-helmet";
 
 const Add = () => {
   const [searchvalue, setSearchvalue] = useState("");
@@ -20,7 +21,12 @@ const Add = () => {
       });
   }
   return (
+    
     <div className="flex flex-col max-w-6xl mx-auto">
+      <Helmet>
+      <title>Add</title>
+      {/* Meta, link etiketleride kullanılabilir. Google artık ssr olarak baktığı için Helmet gayet işlevli bir paket. */}
+      </Helmet>
       <div className="flex  items-center">
         <img src="https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,032541,01b4e4)/iNh3BivHyg5sQRPP1KOkzguEX0H.jpg" />
         <div className="absolute text-white font-bold pl-10 pr-10 ">
